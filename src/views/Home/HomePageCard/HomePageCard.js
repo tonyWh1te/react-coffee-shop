@@ -1,4 +1,4 @@
-import './homePageCard.scss';
+import './HomePageCard.scss';
 
 function HomePageCard({ src, title, price }) {
   return (

@@ -1,0 +1,19 @@
+.beans {
+  display: inline-block;
+  position: relative;
+  &::after,
+  &::before {
+    content: '\a0';
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    top: 50%;
+  }
+  &::before {
+    text-align: right;
+    margin-left: -77%;
+  }
+  &__img {
+    padding: 0 24px;
+  }
+}

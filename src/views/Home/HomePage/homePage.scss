@@ -1,9 +1,5 @@
 @use '/src/vars';
 
-.main {
-  flex: 1 0 auto;
-}
-
 // BEST
 .best {
   background-repeat: no-repeat;
@@ -16,40 +12,5 @@
   &__subtitle {
     @include vars.subtitle(400, vars.$default);
     margin-bottom: 40px;
-  }
-}
-
-// MAIN
-.top-promo {
-  &__inner {
-    min-height: 100vh;
-    padding-top: 180px;
-  }
-}
-
-// ABOUT
-.about {
-  &__inner {
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 70px;
-  }
-  &__subtitle {
-    @include vars.subtitle(400, vars.$default);
-    margin-bottom: 20px;
-  }
-  &__text {
-    max-width: 588px;
-    margin: 0 auto;
-    p {
-      margin: 0 0 30px;
-    }
-  }
-  &__beans {
-    margin-bottom: 36px;
-    &::after,
-    &::before {
-      background-color: vars.$default;
-    }
   }
 }
