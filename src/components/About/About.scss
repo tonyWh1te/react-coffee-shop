@@ -1,0 +1,46 @@
+@use '../../vars';
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 60px;
+  gap: 79px;
+  position: relative;
+  &__img {
+    max-width: 272px;
+    -webkit-filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+  }
+  &__description {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include vars.subtitle(400, vars.$default);
+  }
+  &__beans {
+    margin-bottom: 25px;
+    &::after,
+    &::before {
+      background-color: vars.$default;
+    }
+  }
+  &__text {
+    max-width: 346px;
+    p:first-child {
+      margin: 0 0 26px;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    max-width: 240px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: vars.$default;
+  }
+}

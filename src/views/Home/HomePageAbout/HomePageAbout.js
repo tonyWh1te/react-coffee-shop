@@ -3,12 +3,12 @@ import './HomePageAbout.scss';
 
 function HomePageAbout() {
   return (
-    <section className="about">
+    <section className="about-main">
       <div className="container">
-        <div className="about__inner">
-          <h3 className="about__subtitle">About Us</h3>
-          <Beans classes={['about__beans']} imageUrl={'/images/beans-black.svg'} />
-          <div className="about__text">
+        <div className="about-main__inner">
+          <h3 className="about-main__subtitle">About Us</h3>
+          <Beans classes={['about-main__beans']} imageUrl={'/images/beans-black.svg'} />
+          <div className="about-main__text">
             <p>
               Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation
               recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want.

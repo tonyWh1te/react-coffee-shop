@@ -1,0 +1,27 @@
+@use '../../../vars';
+
+// CHOICE-GOODS
+.choice-goods {
+  &__inner {
+    padding: 60px 170px 30px;
+  }
+  &__filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__form {
+    margin-right: 82px;
+  }
+  &__form-label {
+    margin-right: 18px;
+  }
+  &__filter-btns {
+    display: flex;
+    align-items: center;
+  }
+  &__filter-label {
+    margin-right: 34px;
+  }
+}

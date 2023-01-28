@@ -1,5 +1,7 @@
 import HomePage from './views/Home/HomePage/HomePage';
-import './app.scss';
+import CatalogPage from './views/Catalog/CatalogPage/CatalogPage';
+import Beans from './components/Beans/Beans';
+import './App.scss';
 
 function App() {
   return (
@@ -25,7 +27,10 @@ function App() {
           </nav>
         </div>
       </header>
-      <HomePage />
+      <main className="main">
+        <HomePage />
+        {/* <CatalogPage /> */}
+      </main>
       <footer className="footer">
         <div className="container">
           <div className="footer__inner">
@@ -46,9 +51,7 @@ function App() {
                 </li>
               </ul>
             </nav>
-            <div className="beans footer__beans">
-              <img className="beans__img" src="./images/beans-black.svg" alt="beans" />
-            </div>
+            <Beans classes={['footer__beans']} imageUrl={'/images/beans-black.svg'} />
           </div>
         </div>
       </footer>
