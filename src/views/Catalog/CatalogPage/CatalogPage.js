@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import About from '../../../components/About/About';
 import Top from '../../../components/Top/Top';
 import Cards from '../../../components/Cards/Cards';
@@ -6,52 +5,7 @@ import Search from '../../../components/Search/Search';
 import Filters from '../../../components/Filters/Filters';
 import './CatalogPage.scss';
 
-function CatalogPage() {
-  const data = [
-    {
-      id: uuidv4(),
-      imgUrl: 'images/content/best3.png',
-      title: 'AROMISTICO Coffee 1 kg',
-      country: 'Brazil',
-      price: 6.99,
-    },
-    {
-      id: uuidv4(),
-      imgUrl: 'images/content/best2.png',
-      title: 'Presto Coffee Beans 1 kg',
-      country: 'Kenya',
-      price: 15.99,
-    },
-    {
-      id: uuidv4(),
-      imgUrl: 'images/content/best1.png',
-      title: 'Solimo Coffee Beans 2 kg',
-      country: 'Columbia',
-      price: 10.73,
-    },
-    {
-      id: uuidv4(),
-      imgUrl: '/images/content/best1.png',
-      title: 'Solimo Coffee Beans 2 kg',
-      country: 'Columbia',
-      price: 10.73,
-    },
-    {
-      id: uuidv4(),
-      imgUrl: 'images/content/best3.png',
-      title: 'AROMISTICO Coffee 1 kg',
-      country: 'Brazil',
-      price: 6.99,
-    },
-    {
-      id: uuidv4(),
-      imgUrl: 'images/content/best3.png',
-      title: 'AROMISTICO Coffee 1 kg',
-      country: 'Brazil',
-      price: 6.99,
-    },
-  ];
-
+function CatalogPage({ data }) {
   return (
     <>
       <Top bgUrl={'/images/header-bg.jpg'} title={'Our Coffee'} />
