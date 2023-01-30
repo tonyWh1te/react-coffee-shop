@@ -34,7 +34,7 @@ function Layout() {
           <div className="footer__inner">
             <nav className="menu footer__menu">
               <Link className="logo" to="/">
-                <img src="./images/Logo-black.svg" alt="logo" />
+                <img src="/images/Logo-black.svg" alt="logo" />
               </Link>
               <ul className="menu__list">
                 <li className="menu__list-item">

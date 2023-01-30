@@ -11,7 +11,7 @@ function About({ imgUrl, alt, title, description }) {
           <img className="content__img" src={imgUrl} alt={alt} />
           <div className="content__description">
             <h3 className="content__title">{title}</h3>
-            <Beans classes={['content__beans']} imageUrl={'./images/beans-black.svg'} />
+            <Beans classes={['content__beans']} imageUrl={'/images/beans-black.svg'} />
             <div className="content__text">{elements}</div>
           </div>
         </div>

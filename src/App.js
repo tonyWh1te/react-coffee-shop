@@ -10,24 +10,30 @@ function App() {
   const data = [
     {
       id: uuidv4(),
-      imgUrl: 'images/content/best3.png',
+      imgUrl: '/images/content/best3.png',
       title: 'Brazil Cerrado 2 kg',
       country: 'Brazil',
       price: 6.99,
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam nisi, perferendis repudiandae explicabo consequatur repellendus hic dolor.',
     },
     {
       id: uuidv4(),
-      imgUrl: 'images/content/best2.png',
+      imgUrl: '/images/content/best2.png',
       title: 'Presto Coffee Beans 1 kg',
       country: 'Kenya',
       price: 15.99,
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam nisi, perferendis repudiandae explicabo consequatur repellendus hic dolor.',
     },
     {
       id: uuidv4(),
-      imgUrl: 'images/content/best1.png',
+      imgUrl: '/images/content/best1.png',
       title: 'Solimo Coffee Beans 2 kg',
       country: 'Columbia',
       price: 10.73,
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam nisi, perferendis repudiandae explicabo consequatur repellendus hic dolor.',
     },
     {
       id: uuidv4(),
@@ -35,20 +41,26 @@ function App() {
       title: 'Kirkland Signature 1 kg',
       country: 'Columbia',
       price: 15,
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam nisi, perferendis repudiandae explicabo consequatur repellendus hic dolor.',
     },
     {
       id: uuidv4(),
-      imgUrl: 'images/content/best3.png',
+      imgUrl: '/images/content/best3.png',
       title: 'AROMISTICO Coffee 1 kg',
       country: 'Brazil',
       price: 6.99,
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam nisi, perferendis repudiandae explicabo consequatur repellendus hic dolor.',
     },
     {
       id: uuidv4(),
-      imgUrl: 'images/content/best3.png',
+      imgUrl: '/images/content/best3.png',
       title: 'Bourbon Santos 5 kg',
       country: 'Brazil',
       price: 8.99,
+      description:
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam nisi, perferendis repudiandae explicabo consequatur repellendus hic dolor.',
     },
   ];
 

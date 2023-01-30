@@ -1,0 +1,41 @@
+@use '../../../vars';
+
+.about-product {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 54px;
+    padding-bottom: 30px;
+  }
+  &__img {
+    -webkit-filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    max-width: 392px;
+    width: 100%;
+    object-fit: contain;
+  }
+  &__text {
+    text-align: center;
+    max-width: 418px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include vars.subtitle(400, vars.$default);
+  }
+  &__characteristics {
+    p {
+      text-align: start;
+      margin-bottom: 16px;
+    }
+    b {
+      font-weight: 700;
+      margin-right: 8px;
+    }
+  }
+  &__price {
+    span {
+      font-size: 24px;
+    }
+  }
+}

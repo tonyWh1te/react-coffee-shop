@@ -15,9 +15,31 @@ function ProductPage({ getData }) {
       <Top bgUrl={'/images/header-bg.jpg'} title={'Our Coffee'} />
       {product && (
         <>
-          <p>{title}</p>
-          <p>{product.country}</p>
-          <p>{product.price}</p>
+          <section className="about-product">
+            <div className="container">
+              <div className="about-product__inner">
+                <img className="about-product__img" src={product.imgUrl} alt={title} />
+                <div className="about-product__text">
+                  <h3 className="about-product__title">{title}</h3>
+                  <Beans classes={['content__beans']} imageUrl={'/images/beans-black.svg'} />
+                  <div className="about-product__characteristics">
+                    <p className="about-product__country">
+                      <b>Country:</b>
+                      {product.country}
+                    </p>
+                    <p className="about-desc">
+                      <b>Description:</b>
+                      {product.description}
+                    </p>
+                    <p className="about-product__price">
+                      <b>Price:</b>
+                      <span>{`${product.price}$`}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </>
       )}
     </>
