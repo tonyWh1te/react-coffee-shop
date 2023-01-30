@@ -5,7 +5,7 @@ import Search from '../../../components/Search/Search';
 import Filters from '../../../components/Filters/Filters';
 import './CatalogPage.scss';
 
-function CatalogPage({ data }) {
+function CatalogPage({ data, onUpdateSearch, onSetFilter }) {
   return (
     <>
       <Top bgUrl={'/images/header-bg.jpg'} title={'Our Coffee'} />
@@ -26,11 +26,11 @@ function CatalogPage({ data }) {
                 <label htmlFor="search" className="choice-goods__form-label">
                   Lookiing for
                 </label>
-                <Search />
+                <Search onUpdateSearch={onUpdateSearch} />
               </form>
               <div className="choice-goods__filter-btns">
                 <p className="choice-goods__filter-label">Filter</p>
-                <Filters />
+                <Filters onSetFilter={onSetFilter} />
               </div>
             </div>
             <Cards data={data} />

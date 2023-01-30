@@ -4,11 +4,11 @@ import Beans from '../../../components/Beans/Beans';
 import Top from '../../../components/Top/Top';
 import './ProductPage.scss';
 
-function ProductPage({ getData }) {
+function ProductPage({ getProduct }) {
   const { title } = useParams();
   const [product, setProduct] = useState(null);
 
-  useEffect(() => setProduct(getData(title)), [title, getData]);
+  useEffect(() => setProduct(getProduct(title)), [title]);
 
   return (
     <>

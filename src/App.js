@@ -5,8 +5,11 @@ import CatalogPage from './views/Catalog/CatalogPage/CatalogPage';
 import Layout from './components/Layout/Layout';
 import ProductPage from './views/Product/ProductPage/ProductPage';
 import './App.scss';
+import { useState } from 'react';
 
 function App() {
+  const [term, setTerm] = useState('');
+  const [filter, setFilter] = useState('');
   const data = [
     {
       id: uuidv4(),
@@ -64,19 +67,41 @@ function App() {
     },
   ];
 
-  const getData = (title) => {
+  const getProduct = (title) => {
     const index = data.findIndex((item) => item.title === title);
 
     return data[index];
   };
+
+  const onUpdateSearch = (term) => {
+    setTerm(term);
+  };
+
+  const searchProduct = (term, items) => {
+    if (term.length === 0) {
+      return items;
+    }
+
+    return items.filter((item) => item.title.toLowerCase().indexOf(term.toLowerCase()) >= 0);
+  };
+
+  const onSetFilter = (newFilter) => {
+    setFilter(newFilter);
+  };
+
+  const filterProduct = (filter, items) => {
+    return filter.length > 0 ? items.filter((item) => item.country === filter) : items;
+  };
+
+  const visibleData = filterProduct(filter, searchProduct(term, data));
 
   return (
     <div className="wrapper">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="products" element={<CatalogPage data={data} />} />
-          <Route path="products/:title" element={<ProductPage getData={getData} />} />
+          <Route path="products" element={<CatalogPage data={visibleData} onUpdateSearch={onUpdateSearch} onSetFilter={onSetFilter} />} />
+          <Route path="products/:title" element={<ProductPage getProduct={getProduct} />} />
         </Route>
       </Routes>
     </div>
