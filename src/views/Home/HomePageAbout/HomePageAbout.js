@@ -7,7 +7,7 @@ function HomePageAbout() {
       <div className="container">
         <div className="about-main__inner">
           <h3 className="about-main__subtitle">About Us</h3>
-          <Beans classes={['about-main__beans']} imageUrl={'/images/beans-black.svg'} />
+          <Beans classes={['about-main__beans']} imageUrl={'images/beans-black.svg'} />
           <div className="about-main__text">
             <p>
               Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation

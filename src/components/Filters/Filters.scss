@@ -15,10 +15,7 @@
     &:last-of-type {
       border-radius: 0px 4px 4px 0px;
     }
-    &:hover {
-      color: vars.$header;
-      background-color: vars.$default;
-    }
+    &:hover,
     &.choice-goods__filter-btn--active {
       color: vars.$header;
       background-color: vars.$default;

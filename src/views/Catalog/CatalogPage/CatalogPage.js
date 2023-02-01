@@ -5,12 +5,12 @@ import Search from '../../../components/Search/Search';
 import Filters from '../../../components/Filters/Filters';
 import './CatalogPage.scss';
 
-function CatalogPage({ data, onUpdateSearch, onSetFilter, isReady }) {
+function CatalogPage({ data, onUpdateSearch, onSetFilter, isReady, filter }) {
   return (
     <>
-      <Top bgUrl={'/images/header-bg.jpg'} title={'Our Coffee'} />
+      <Top bgUrl={'images/header-bg.jpg'} title={'Our Coffee'} />
       <About
-        imgUrl={'./images/content/girl.jpg'}
+        imgUrl={'images/content/girl.jpg'}
         alt={'girl'}
         title={'About our beans'}
         description={[
@@ -30,7 +30,7 @@ function CatalogPage({ data, onUpdateSearch, onSetFilter, isReady }) {
               </form>
               <div className="choice-goods__filter-btns">
                 <p className="choice-goods__filter-label">Filter</p>
-                <Filters onSetFilter={onSetFilter} />
+                <Filters onSetFilter={onSetFilter} filter={filter} />
               </div>
             </div>
             <Cards data={data} isLoaded={isReady} />

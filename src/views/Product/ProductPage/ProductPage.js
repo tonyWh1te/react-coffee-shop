@@ -8,7 +8,7 @@ function ProductPage({ getProduct }) {
   const { title } = useParams();
   const [product, setProduct] = useState(null);
 
-  useEffect(() => setProduct(getProduct(title)), [title]);
+  useEffect(() => setProduct(getProduct(title)), [title, getProduct]);
 
   return (
     <>

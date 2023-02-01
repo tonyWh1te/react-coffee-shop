@@ -60,10 +60,10 @@ function App() {
     <div className="wrapper">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<HomePage data={data} />} />
           <Route
             path="products"
-            element={<CatalogPage data={visibleData} onUpdateSearch={onUpdateSearch} onSetFilter={onSetFilter} isReady={isReady} />}
+            element={<CatalogPage data={visibleData} onUpdateSearch={onUpdateSearch} onSetFilter={onSetFilter} isReady={isReady} filter={filter} />}
           />
           <Route path="products/:title" element={<ProductPage getProduct={getProduct} />} />
         </Route>

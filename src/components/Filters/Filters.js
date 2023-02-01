@@ -1,6 +1,6 @@
 import './Filters.scss';
 
-function Filters({ onSetFilter }) {
+function Filters({ onSetFilter, filter }) {
   const buttonsData = [
     {
       label: 'Brazil',
@@ -13,11 +13,18 @@ function Filters({ onSetFilter }) {
     },
   ];
 
-  const buttons = buttonsData.map(({ label }) => (
-    <button className="choice-goods__filter-btn" key={label} onClick={() => onSetFilter(label)}>
-      {label}
-    </button>
-  ));
+  const buttons = buttonsData.map(({ label }) => {
+    const active = label === filter;
+    return (
+      <button
+        className={`choice-goods__filter-btn ${active ? ' choice-goods__filter-btn--active' : ''}`}
+        key={label}
+        onClick={() => onSetFilter(label)}
+      >
+        {label}
+      </button>
+    );
+  });
 
   return <>{buttons}</>;
 }
